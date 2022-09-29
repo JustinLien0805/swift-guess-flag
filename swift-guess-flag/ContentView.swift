@@ -17,14 +17,16 @@ struct ContentView: View {
 
     var body: some View {
         ZStack{
-            Color.mint
+            LinearGradient(gradient: Gradient(colors: [.blue, .black]), startPoint: .top, endPoint: .bottom)
                 .ignoresSafeArea()
             VStack(spacing: 30){
                 VStack{
                     Text("Tap the flag of: ")
                         .font(.system(size: 30, weight: .bold))
+                        .foregroundColor(.white)
                     Text(countries[correctAnswer])
                         .font(.system(size: 30, weight: .bold))
+                        .foregroundColor(.white)
                 }
                 ForEach(0..<3) { number in
                     Button {
